@@ -23,13 +23,13 @@ app.use(session({secret:'so-many-secrets',cookie:{maxAge:600000,httpOnly:false}}
 app.get('/', function (req, res) {
   console.log(data);
   console.log(data.users);
-  res.render('index', {"users":data.users})
+  res.render('index')
 })
 
 app.post('/', function (req,res) {
   authorize(req,res);
   if (res.authenticated) {
-    res.render('index',{authenticated:res.authenticated, user:req.username})
+    res.render('index',{authenticated:res.authenticated, user:req.body.username})
   }
   else {
     res.render('index',{authError:res.authError});
