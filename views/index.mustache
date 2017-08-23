@@ -14,17 +14,22 @@
      <link rel="stylesheet" type="text/css" href="./public/style.css">
    </head>
    <body>
-
+     <p>user: "Harvey" pass:"2face"</p>
+     <p>user: "Bruce"  pass:"b@man"</p>
      <form action = "/" method="post">
-       <input type="text" name="username">
-       <input type="text" name="password">
-       <button type="submit">
+       <p><span>Username:<input type="text" name="username"></span></p>
+       <p><span>Password:<input type="text" name="password"></span></p>
+       <button type="submit">Submit</button>
      </form>
+
+     {{#authenticated}}
+        <p>Hi, {{user}}</p>
+     {{/authenticated}}
+
+     {{#authError}}
+     <p>Error: {{authError}}
+     {{/authError}}
+
 
    </body>
  </html>
-
-
-
- <!-- <p><span>Username:</span></p>
- <p><span>Password:</span></p> -->

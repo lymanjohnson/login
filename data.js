@@ -1,5 +1,5 @@
-let users = [{"name" : "Harvey" , "password" : "2face"},
-        {"name" : "Bruce"  , "password" : "b@man"}]
+let users = [{"username" : "Harvey" , "password" : "2face"},
+        {"username" : "Bruce"  , "password" : "b@man"}]
 
 
 
